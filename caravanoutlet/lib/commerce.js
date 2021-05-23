@@ -1,24 +1,7 @@
-import CommerceSDK from "@chec/commerce.js";
+import CommerceSDK from "@chec/commerce.js"
 
-const checAPIKey = process.env.NEXT_PUBLIC_CHEC_PUBLIC_API_KEY;
-const devEnvironment = process.env.NODE_ENV === 'development';
+var PUBLIC_API_KEY = "pk_26859379da8edb742ae91b09e5ae16972208f20fd079f"
 
-// Commerce.js constructor options
-const commerceConfig = {
-  axiosConfig: {
-    headers: {
-      'X-Chec-Agent': 'commerce.js/v2',
-      'Chec-Version': '2021-03-10',
-    },
-  },
-};
+const commerce = new CommerceSDK(PUBLIC_API_KEY);
 
-if (devEnvironment && !checAPIKey) {
-  throw Error('Your public API key must be provided as an environment variable named `NEXT_PUBLIC_CHEC_PUBLIC_API_KEY`. Obtain your Chec public key by logging into your Chec account and navigate to Setup > Developer, or can be obtained with the Chec CLI via with the command chec whoami');
-}
-
-export const commerce = new CommerceSDK(
-  checAPIKey,
-  devEnvironment,
-  commerceConfig,
-);
+export default commerce;
