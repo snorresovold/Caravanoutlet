@@ -1,16 +1,17 @@
 import Link from "next/link";
 
+import styles from "../../styles/Categories.module.css"
+
 function CategoryList({ categories }) {
 
   return categories.map(({ name, slug }, index) => (
-      <ul>
+      <ul className={styles.list}>
         <li key={slug}>
       <Link href={`/kategorier/${slug}`}>
-        <a className="text-lg md:text-xl lg:text-2xl hover:italic">{name}</a>
+        <a className={styles.CategoryList}>{name}</a>
       </Link>
     </li>
       </ul>
-
   ));
 }
 

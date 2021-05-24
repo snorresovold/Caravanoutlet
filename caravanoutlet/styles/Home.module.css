@@ -1,0 +1,9 @@
+.categories {
+    display: flex;
+    align-self: center;
+    justify-content: left;
+    list-style-type: none;
+}
+.listitem {
+    text-decoration: underline;
+}
