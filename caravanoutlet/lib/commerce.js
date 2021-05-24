@@ -1,7 +1,7 @@
 import CommerceSDK from "@chec/commerce.js"
 
-var PUBLIC_API_KEY = "pk_26859379da8edb742ae91b09e5ae16972208f20fd079f"
+var PUBLIC_API_KEY = "pk_268597d7ec2c2f9d80ae12829d5025d15ea65c87ad267"
 
-const client = new CommerceSDK(PUBLIC_API_KEY);
+const commerce = new CommerceSDK(PUBLIC_API_KEY);
 
-export default client;
+export default commerce;
