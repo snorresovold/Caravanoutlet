@@ -55,4 +55,14 @@ function productPage({ ptoduct }) {
           }, {}),
         [product.permalink]
       );
+
+    
+    return (
+        <React.Fragment>
+            <Head>
+                <title>{product.seo.title}</title>
+                <meta name="description" content={product.seo.description}></meta>
+            </Head>
+        </React.Fragment>
+    )
 }
