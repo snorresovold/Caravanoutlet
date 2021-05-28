@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { toast } from "react-toastify";
 
-import { commerce } from "../lib/commerce";
-import { useCartDispatch } from "../context/cart";
+import commerce from "../../lib/commerce";
+import { useCartDispatch } from "../../context/cart";
 
 function CartItem({ id, media, name, quantity, line_total, selected_options }) {
   const { setCart } = useCartDispatch();

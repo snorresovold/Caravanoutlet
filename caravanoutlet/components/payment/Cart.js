@@ -19,18 +19,18 @@ export default function Cart() {
 
       <div>
         {isEmpty ? (
-          <p>Your cart is empty.</p>
+          <p>Handlekurven din er tom</p>
         ) : (
           <>
             <div>
-              Total: {subtotal?.formatted_with_symbol}, {total_unique_items}{" "}
+              Totalpris: {subtotal?.formatted_with_symbol}, {total_unique_items}{" "}
               {total_unique_items === 1 ? "item" : "items"}
             </div>
             <div>
               <button
                 onClick={showCheckout}
               >
-                Check Out
+                Betal
               </button>
             </div>
           </>
