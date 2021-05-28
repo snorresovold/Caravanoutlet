@@ -8,6 +8,7 @@ import { ThemeProvider } from "../context/theme";
 import { ModalProvider } from "../context/modal";
 import { CartProvider } from "../context/cart";
 import { CheckoutProvider } from "../context/checkout";
+import Modal from "../components/payment/Modal";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
       <CartProvider>
         <CheckoutProvider>
             <AnimatePresence initial={false} exitBeforeEnter>
+              <Modal />
               <Layout>
                 <Component {...pageProps} />
               </Layout>
